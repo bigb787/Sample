@@ -1,11 +1,17 @@
 #Provider Details
 terraform { 
     required_providers {
-      source = "hashicorp/azurerm"
+    azurerm = {
+      source  = "hashicorp/azurerm"
     }
-tls = {
+    random = {
+      source  = "hashicorp/random"    
+    }
+    tls = {
       source = "hashicorp/tls"
 }
+    }
+
 }
 
 provider "azurerm" {
